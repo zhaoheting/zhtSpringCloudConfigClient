@@ -1,12 +1,14 @@
 package com.example.zhtSpringCloudConfigClient.config;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Service;
 
-//@RefreshScope
+@RefreshScope
 @Service
 public class ConfigService {
-
-    private String testString = "wocao";
+    @Value("${validation.properties.maxNameLength}")
+    private String testString;
 
     public String getTestString() {
         return testString;

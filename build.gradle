@@ -1,8 +1,8 @@
-plugins {
-	id 'org.springframework.boot' version '2.1.7.RELEASE'
-	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
-	id 'java'
-}
+//Why it's unnecessary to add the version info? What's the default version?
+apply plugin:'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'war'
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
@@ -26,18 +26,15 @@ ext {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compile "org.springframework.boot:spring-boot-starter-actuator"
-	compile group: 'org.springframework.boot', name: 'spring-boot-starter-cache'
 	//aspects
-	compile group: 'org.springframework.boot', name: 'spring-boot-starter-aop'
+//	compile group: 'org.springframework.boot', name: 'spring-boot-starter-aop'
 	//spring retry. used for retrying config server property load
 //	compile group: 'org.springframework.retry', name: 'spring-retry', version: '1.2.1.RELEASE'
 
-//	implementation 'org.springframework.cloud:spring-cloud-bus'
+	implementation 'org.springframework.cloud:spring-cloud-bus'
 	implementation 'org.springframework.cloud:spring-cloud-starter-config'
 	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-}
+	annotationProcessor 'org.projectlombok:lombok' }
 
 dependencyManagement {
 	imports {
