@@ -11,8 +11,13 @@ public class PropertiesController {
     @Autowired
     ConfigService configService;
 
-    @RequestMapping(value = "/showProperties")
-    public String getProperty() {
-        return configService.getTestString();
+    @RequestMapping(value = "/name")
+    public String getName() {
+        return configService.getName();
+    }
+
+    @RequestMapping(value="/age")
+    public Long getAge(){
+        return configService.getAge();
     }
 }
