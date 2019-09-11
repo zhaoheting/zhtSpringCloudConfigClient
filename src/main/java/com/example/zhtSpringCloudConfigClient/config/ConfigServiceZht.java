@@ -3,6 +3,11 @@ package com.example.zhtSpringCloudConfigClient.config;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+/**
+ * Get properties From spring cloud.
+ *
+ * @author heting.zhao
+ */
 @Service
 public class ConfigServiceZht {
 
