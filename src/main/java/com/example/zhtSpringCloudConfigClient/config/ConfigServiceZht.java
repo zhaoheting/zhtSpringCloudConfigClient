@@ -1,6 +1,7 @@
 package com.example.zhtSpringCloudConfigClient.config;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Service;
 
 /**
@@ -9,6 +10,8 @@ import org.springframework.stereotype.Service;
  * @author heting.zhao
  */
 @Service
+//Refresh the properties automatically.
+@RefreshScope
 public class ConfigServiceZht {
 
     @Value("${validation.properties.test}")
