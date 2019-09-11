@@ -25,15 +25,10 @@ ext {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-//	compile "org.springframework.boot:spring-boot-starter-actuator"
-//	compile group: 'org.springframework.boot', name: 'spring-boot-starter-cache'
-	//aspects
-//	compile group: 'org.springframework.boot', name: 'spring-boot-starter-aop'
-	//spring retry. used for retrying config server property load
-//	compile group: 'org.springframework.retry', name: 'spring-retry', version: '1.2.1.RELEASE'
+//	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 
 //	implementation 'org.springframework.cloud:spring-cloud-bus'
-//	implementation 'org.springframework.cloud:spring-cloud-starter-config'
+	implementation 'org.springframework.cloud:spring-cloud-starter-config'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
