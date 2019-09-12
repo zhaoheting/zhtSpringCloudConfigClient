@@ -1,4 +1,4 @@
-package com.example.zhtSpringCloudConfigClient.config;
+package com.example.zhtSpringCloudConfigClient.services;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 @ConfigurationProperties(prefix = "author")
-@PropertySource("classpath:config/author.properties")
+@PropertySource("classpath:services/author.properties")
 public class ConfigService {
 
     //The property from designated file will be covered by the property
