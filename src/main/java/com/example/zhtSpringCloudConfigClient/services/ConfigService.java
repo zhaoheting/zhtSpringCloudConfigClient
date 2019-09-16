@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 @ConfigurationProperties(prefix = "author")
-@PropertySource("classpath:services/author.properties")
+@PropertySource("classpath:config/author.properties")
 public class ConfigService {
 
     //The property from designated file will be covered by the property
