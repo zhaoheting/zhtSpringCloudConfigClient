@@ -1,3 +1,8 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.7.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
 //Why it's unnecessary to add the version info? What's the default version?
 apply plugin:'java'
 apply plugin: 'org.springframework.boot'
@@ -24,7 +29,6 @@ ext {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-<<<<<<< HEAD
 	compile "org.springframework.boot:spring-boot-starter-actuator"
 	//aspects
 //	compile group: 'org.springframework.boot', name: 'spring-boot-starter-aop'
@@ -34,13 +38,11 @@ dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-bus'
 	implementation 'org.springframework.cloud:spring-cloud-starter-config'
 	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok' }
-=======
+	annotationProcessor 'org.projectlombok:lombok'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-mail'
 	implementation 'org.springframework.boot:spring-boot-starter-test'
 }
->>>>>>> Send_Email
 
 dependencyManagement {
 	imports {
