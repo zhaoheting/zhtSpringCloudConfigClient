@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 @RefreshScope
 public class ConfigServiceZht {
 
-    @Value("${validation.properties.test}")
+    @Value("${test}")
     private String testStr;
 
     public String getTestStr() {
